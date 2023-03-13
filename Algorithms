@@ -1,0 +1,114 @@
+Types:
+  supervised | unsupervised | semisupervised | reinforcement learning
+  online | batch learning (system trained by all available data)
+  instance-based | model-based
+  
+MODEL BASED:
+Linear Regression
+  import sklearn.linear_model
+  model = sklearn.linear_model.LinearRegression()
+  
+K-Nearest Neighbors
+  import sklearn.neighbors
+  model = sklearn.neighbors.KNeighborsRegressor()
+  
+Decision Tree
+  from sklearn.tree import DecisionTreeRegressor
+  model = DecisionTreeRegressor(max_depth=,random_state)
+
+Random Forest
+  from sklearn.ensemble import RandomForestRegressor
+  model = RandomForestRegressor(n_estimators=,random_state=)
+
+Stochastic Gradient Descent
+  from sklearn.linear_model import SGDClassifier
+  model = SGDClassifier(loss=, penalty=, random_state=)
+  
+  from sklearn.linear_model import SGDRegressor
+  model = SGDRegressor(max_iter=, tol=, eta=, loss=, penalty=, random_state=)
+
+Base Estimator
+  from sklearn.base import BaseEstimator
+  model = BaseEstimator()
+
+Support Vector Machine
+  from sklearn.svm import SVC
+  model = SVC(gamma=, random_state=)
+
+  from sklearn.svm import SVR
+  model = SVR(epsilon=, random_state=)
+  
+  from sklearn.svm import LinearSVC
+  model = LinearSVC()
+  
+  from sklearn.svm import LinearSVR
+  model = LinearSVR(epsilon=, random_state=)
+  
+One Vs Rest
+  from sklearn.multiclass import OneVsRestClassifier
+  model = OneVsRestClassifier()
+
+One Vs One
+  from sklearn.multiclass import OneVsOneClassifier
+  model = OneVsOneClassifier()
+  
+Ridge Regression
+  from sklearn.linear_model import Ridge
+  model = Ridge(alpha=, solver=)
+
+Least Absolute Shrinkage and Selection Operator Regression
+  from sklearn.linear_model import Lasso
+  model = Lasso(alpha=)
+
+Elastic Net
+  from sklearn.linear_model import ElasticNet
+  model = ElasticNet(alpha=, 11_ratio=)
+  
+Voting Classifier
+  from sklearn.ensemble import VotingClassifier
+  model = VotingClassifier(estimators=, voting=)
+  
+Boot-strap Aggregating
+  from sklearn.ensemble import BaggingClassifier
+  model = BaggingClassifier()
+
+Adaptive Boosting
+  from sklearn.ensemble import AdaBoostClassifier
+  model = AdaBoostClassifier()
+
+
+
+
+Train-Test Split
+  from sklearn.model_selection import train_test_split
+  train_set, test_set = train_test_split(data, test_size=, random_state=)
+Stratified Shuffle Split
+  from sklearn.model_selection import StratifiedShuffleSplit
+  split = StratifiedShuffleSplit(data, n_splits=, test_size=, random_state=)
+  
+  
+COMMON PROBLEMS:
+Sampling Noise - nonrepresentative data as a result of chance
+Sampling bias - nonrepresentative data as a result of a flawed sampling method
+Skewed dataset - when some classes are more frequent than others
+Computational complexity - 
+
+
+
+1. look at the big picture
+2. get the data
+3. discover and visualize the data to gain insights
+4. prepare the data for ML algorithms
+5. select a model and train it
+6. fine tune your model
+7. present your solution
+8. launch, monitor, and maintain
+
+
+ALSO DO SAMPLES OF IMPUTERS, ENCODERS, TRANSFORMERS, FEATURE SCALING, PIPELINES, CROSS-VALIDATION, STANDARDSCALER, POLYNOMIALFEATURES
+
+ALSO DO SAMPLES FOR GRIDSEARCHCV, RANDOMIZEDSEARCHCV, CONFUSIONMATRIX, EARLY STOPPING, KERNEL TRICK
+
+ALSO DO SAMPLES FOR SCORING, ROC CURVE, SVD, GRADIENTDESCENT
+
+
