@@ -3,29 +3,14 @@ Types:
   online | batch learning (system trained by all available data)
   instance-based | model-based
   
-MODEL BASED:
-Linear Regression
-  import sklearn.linear_model
-  model = sklearn.linear_model.LinearRegression()
-  
+ALGORITHM
 K-Nearest Neighbors
-  import sklearn.neighbors
-  model = sklearn.neighbors.KNeighborsRegressor()
+  from sklearn.neighbors import KNeighborsRegressor, KNeighborsClassifier
+
   
 Decision Tree
   from sklearn.tree import DecisionTreeRegressor
   model = DecisionTreeRegressor(max_depth=,random_state)
-
-Random Forest
-  from sklearn.ensemble import RandomForestRegressor
-  model = RandomForestRegressor(n_estimators=,random_state=)
-
-Stochastic Gradient Descent
-  from sklearn.linear_model import SGDClassifier
-  model = SGDClassifier(loss=, penalty=, random_state=)
-  
-  from sklearn.linear_model import SGDRegressor
-  model = SGDRegressor(max_iter=, tol=, eta=, loss=, penalty=, random_state=)
 
 Base Estimator
   from sklearn.base import BaseEstimator
@@ -51,6 +36,17 @@ One Vs Rest
 One Vs One
   from sklearn.multiclass import OneVsOneClassifier
   model = OneVsOneClassifier()
+
+Linear Regression
+  import sklearn.linear_model
+  model = sklearn.linear_model.LinearRegression()
+  
+Stochastic Gradient Descent
+  from sklearn.linear_model import SGDClassifier
+  model = SGDClassifier(loss=, penalty=, random_state=)
+  
+  from sklearn.linear_model import SGDRegressor
+  model = SGDRegressor(max_iter=, tol=, eta=, loss=, penalty=, random_state=)
   
 Ridge Regression
   from sklearn.linear_model import Ridge
@@ -63,6 +59,10 @@ Least Absolute Shrinkage and Selection Operator Regression
 Elastic Net
   from sklearn.linear_model import ElasticNet
   model = ElasticNet(alpha=, 11_ratio=)
+
+Random Forest
+  from sklearn.ensemble import RandomForestRegressor
+  model = RandomForestRegressor(n_estimators=,random_state=)
   
 Voting Classifier
   from sklearn.ensemble import VotingClassifier
