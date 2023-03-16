@@ -16,7 +16,11 @@ Random Forest
 Gradient Boosted Regression Tree
   from sklearn.ensemble import GradientBoostingRegressor, GradientBoostingClassifier
 
-
+Voting Classifier
+  from sklearn.ensemble import VotingClassifier
+  
+  
+  
 Base Estimator
   from sklearn.base import BaseEstimator
   model = BaseEstimator()
@@ -65,10 +69,6 @@ Elastic Net
   from sklearn.linear_model import ElasticNet
   model = ElasticNet(alpha=, 11_ratio=)
   
-Voting Classifier
-  from sklearn.ensemble import VotingClassifier
-  model = VotingClassifier(estimators=, voting=)
-  
 Boot-strap Aggregating
   from sklearn.ensemble import BaggingClassifier
   model = BaggingClassifier()
@@ -76,6 +76,7 @@ Boot-strap Aggregating
 Adaptive Boosting
   from sklearn.ensemble import AdaBoostClassifier
   model = AdaBoostClassifier()
+
 
 
 
