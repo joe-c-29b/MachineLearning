@@ -19,6 +19,11 @@ Gradient Boosted Regression Tree
 Voting Classifier
   from sklearn.ensemble import VotingClassifier
   
+SUPPORT
+GridSearchCV
+  from sklearn.model_selection import GridSearchCV
+  
+  
   
   
 Base Estimator
@@ -82,71 +87,8 @@ Adaptive Boosting
 
 
 
-GridSearchCV
-  from sklearn.model_selection import GridSearchCV
-    GridSearchCV(estimator, 
-      param_grid, 
-      scoring=None, 
-      n_jobs=None, 
-      refit=True, 
-      cv=None, 
-      verbose=0, 
-      pre_dispatch='2*n_jobs', 
-      error_score=nan, 
-      return_train_score=False)
-      
-      PARAMETERS - search over specified parameter values for an estimator in order to find the best combination of parameters for the estimator
-      estimator= the estimator you are searching for; must have either a score function or 'scoring' must be passed 
-      param_grid= dictionary with parameter names as keys and lists of parameter settings to try as values 
-      scoring= strategy to evaluate the performance of the cross-validated model on the test set 
-      n_jobs= parallel jobs running
-        --1 means use all available processors
-      refit= refit an estimator using the best found parameters on the whole dataset
-      cv= cross-validation splitting strategy
-        -None : default to use t5-fold cross validation
-        -int: to specify the number of folds in a (Stratified)KFold
-        -CV splitter
-        -iter : yielding (train, test) splits as arrays of indices 
-      verbose= how many describing messages the function will output 
-        -1 : the computation time for each fold and parameter candidate is displayed
-        -2 : the score is also displayed
-        -3 : the fold and candidate parameter indexes are also displayed together with the starting time of the computation
-      pre_dispatch= number of jobs that get dispatched during parallel execution; reducing can help avoid excessive RAM usage if that is an issue
-        -None
-        -int : exact number of jobs that are spawned
-        -str : an expression of n_jobs; ex. '2*n_jobs'
-      error_score=value to assign to the score if an error occurs during fitting
-        -'raise' : the error is raised
-        -int : FitFailedWarning is raised
-        -np.nan : default, raises no error
-      return_train_score= whether or not the training scores will be given in the results
 
-      ATTRIBUTES
-      cv_results_ : a dictionary with keys as column headers and values as columns
-      best_estimator_ : estimator dubbed the best by the grid search (not available if refit=False)
-      best_score_ : the mean cross-validated score of the best estimator(not available if refit is a function)
-      best_params_ : parameter setting that gave the best results on the hold out data
-      best_index_ : index that corresponds to the best candidate parameter setting in the cv_results_
-      scorer_ : function used on the held out data to choose the best parameters
-      n_splits_ : number of cross-validation splits (folds)
-      refit_time_ : seconds used for refitting the best model (only if refit=True)
-      multimetric_ : whether or not the scorers compute several metrics
-      classes_ : class labels
-      n_features_in_ : number of features seen during fit
-      feature_names_in_ : names of the above features
-      
-      METHODS
-      decision_function(X) #call on the estimator with the best found parameters
-      fit() 
-      get_params([deep]) #get the parameters for this estimator
-      inverse_transform(Xt) #call on the estimator with the best found params
-      predict(X)
-      predict_log_proba(X)
-      predict_proba(X)
-      score(X[,y]) #return the score on the given data, if the estimator has been refit
-      score_samples(X) #call on the estimator with the best found parameters
-      set_params()
-      transform(X) #call on the estimator with the best found parameters
+
       
       
 
