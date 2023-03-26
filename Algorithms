@@ -23,7 +23,8 @@ SUPPORT
 GridSearchCV
   from sklearn.model_selection import GridSearchCV
   
-  
+PCA
+  from sklearn.decomposition import PCA
   
   
 Base Estimator
