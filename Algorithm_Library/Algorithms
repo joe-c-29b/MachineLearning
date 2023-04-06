@@ -33,6 +33,8 @@ GridSearchCV
 PCA
   from sklearn.decomposition import PCA
   
+OneHotEncoder
+  from sklearn.preprocessing import OneHotEncoder
 
 
 
